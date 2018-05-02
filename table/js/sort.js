@@ -5,7 +5,8 @@ function handleTableClick(event) {
         table = event.currentTarget;
 
   let thList = document.querySelectorAll('th');
-  thList = Array.from(thList).filter(item => {return item !== th});
+  //thList = Array.from(thList).filter(item => {return item !== th});
+  Array.from(thList).forEach(item => {return item !== th});
 
   Array.from(thList).forEach(item => {
     item.removeAttribute('data-dir');
